@@ -1,3 +1,5 @@
+package ctrl;
+
 import java.util.Scanner;
 
 public class Controller {
