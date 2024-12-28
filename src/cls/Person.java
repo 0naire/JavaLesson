@@ -17,7 +17,11 @@ public class Person {
         name = n;
         height = h;
 
-        System.out.println("Person 클래스로부터 객ㅊ가 생성됨");
+        System.out.println("Person 클래스로부터 객체가 생성됨");
+    }
+
+    public Person() {
+
     }
 
     // 행위(Method, Member function)
