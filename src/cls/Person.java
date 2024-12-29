@@ -7,17 +7,18 @@ public class Person {
     // public : 제한없음, 완전 공개
 
     // 데이터
-    int age;        // 나이 데이터(속성, Attribute, Property, Member Variable)
-    String name;    // 이름 데이터 0개의 사용위치
-    float height;
+    private int age;        // 나이 데이터(속성, Attribute, Property, Member Variable)
+    private String name;    // 이름 데이터 0개의 사용위치
+    private float height;
+
+
 
     // 생성자 : 클래스명과 같음, 객체가 생성될때 한번 호출됨
     public Person(String n, float h, int a) {
         age = a;
         name = n;
         height = h;
-
-        System.out.println("Person 클래스로부터 객체가 생성됨");
+//        System.out.println("Person 클래스로부터 객체가 생성됨");
     }
 
     public Person() {
@@ -25,7 +26,41 @@ public class Person {
     }
 
     // 행위(Method, Member function)
-    void introduce() {
+    public void introduce() {
+        System.out.println("안녕하세요, 저는 " + name + "이고, ");
+        System.out.println("나이는 " + age + "살 입니다.");
+    }
 
+
+    public void setAge(int i) {
+        if (age < 0)
+            return;
+
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        if (name.isEmpty())
+            return;
+
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public String getName() {
+        return name;
     }
 }
+
+// getAge : 나이를 반환하는 메소드
+// setAge : 나이를 설정(저장)하는 메소드, 음수는 설정할 수 없도록 제한.
+
+// getName : 이름(문자열)을 반환하는 메소드
+// setName : 이름(문자열)을 설정하는 메소드, 입력값이 비어있으면 설정할 수 없도록 제한
