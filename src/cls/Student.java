@@ -13,7 +13,7 @@ public class Student extends Person{
     // Student 클래스의 생성자
     public Student() {
         // 부모 클래스의 생성자를 호출
-        super(n, h, a); // Person(n, h, a);
+        //super(n, h, a); // Person(n, h, a);
         school = "";
         grade = 1;
     }
