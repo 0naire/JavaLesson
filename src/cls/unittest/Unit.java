@@ -1,6 +1,6 @@
-package cls;
+package cls.unittest;
 
-public class Unit {
+public abstract class Unit {
     protected boolean steampack;
     private int hp;
     private int power;
@@ -16,6 +16,11 @@ public class Unit {
     public void move(int x, int y) {
         System.out.printf("(%d, %d)위치로 이동합니다.\n", x, y);
     }
+
+    public abstract void damage(int power);
+    public abstract void attack(Unit target);
+
+
 
     // 메소드의 정의 방법
     // 접근 제한자 변환형 메소드이름(매개변수들...)
@@ -56,15 +61,7 @@ public class Unit {
         this.power = power;
     }
 
-    public void damage(int power) {
-        hp -= power;
-        System.out.printf("%s의 hp : %d\n", name, hp);
-    }
 
-    public void attack(Unit target) {
-        target.damage(power);
-        System.out.printf("%s가 %s를 공격함\n", this.name, target.getName());
-    }
 }
 
 // Marine

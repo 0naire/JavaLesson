@@ -1,4 +1,4 @@
-package cls;
+package cls.unittest;
 
 public class Marine extends Unit {
     public Marine(String name) {
@@ -18,8 +18,13 @@ public class Marine extends Unit {
     public void attack(Unit target) {
         if ( steampack )
             setPower( getPower()*2 );
+        else
+            setPower( 10 );
+    }
 
-        super.attack(target);
+    public void damage(int power)
+    {
+
     }
 }
 
