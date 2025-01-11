@@ -14,15 +14,15 @@ public class Subject {
         return title;
         // return super.toString(); ---> Object class의 toString()호출
 
-        @Override
-        public boolean equals(Object obj) {
-            if (obj instanceof Subject) {
-                Subject sub = (Subject) obj;
-                if ( sub,toString().equals(title) )
-                    return true;
-            }
-
-            return false;
-        }
+//        @Override
+//        public boolean equals(Object obj) {
+//            if (obj instanceof Subject) {
+//                Subject sub = (Subject) obj;
+//                if ( sub,toString().equals(title) )
+//                    return true;
+//            }
+//
+//            return false;
+//        }
     }
 }

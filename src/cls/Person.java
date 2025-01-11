@@ -57,6 +57,33 @@ public class Person {
     public String getName() {
         return name;
     }
+
+    // static 내부 클래스 Builder 정의
+    public static class Builder {
+        // 데이터
+        private int a;        // 나이 테이터 속성
+        private String n;    // 이름 데이터 0개의 사용위치
+        private float h;
+
+        public Builder name(String n) {
+            this.n = n;
+            return this;
+        }
+
+        public Builder age(int a) {
+            this.a = a;
+            return this;
+        }
+
+        public Builder height(float h) {
+            this.h = h;
+            return this;
+        }
+
+        public Person build() {
+            return new Person(n, h, a);
+        }
+    }
 }
 
 // getAge : 나이를 반환하는 메소드
