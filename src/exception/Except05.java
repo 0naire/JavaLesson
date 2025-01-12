@@ -5,6 +5,7 @@ public class Except05 {
         inputAge ageInput = new inputAge();
         try {
             int age = ageInput.input();
+            System.out.println( age );
         } catch (CustomAgeException e) {
             System.out.println(e);
         } catch (NumberFormatException e) {
