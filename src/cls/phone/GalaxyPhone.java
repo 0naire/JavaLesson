@@ -9,6 +9,7 @@ public abstract class GalaxyPhone implements Phone {
     @Override
     public boolean powerOn() {
         System.out.println("파워온");;
+        return false;
     }
 
     @Override
