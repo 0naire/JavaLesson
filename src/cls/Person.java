@@ -63,6 +63,19 @@ public class Person {
         return getName();
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        boolean isPerson = obj instanceof Person;
+        if (!isPerson)
+            return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int code = name.length() + (int) height + age;
+        return code;
+    }
+
     // static 내부 클래스 Builder 정의
     public static class Builder {
         // 데이터
